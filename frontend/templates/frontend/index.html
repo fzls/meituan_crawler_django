@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <title>美团外卖商家搜索</title>
+</head>
+<body>
+<div class="container">
+    {% comment %}导航栏开始{% endcomment %}
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/meituan">美团外卖数据</a>
+        </div>
+
+        {#        <!-- Collect the nav links, forms, and other content for toggling -->#}
+        {#        <div class="collapse navbar-collapse navbar-ex1-collapse">#}
+        {#            <ul class="nav navbar-nav navbar-right">#}
+        {#                <li>#}
+        {#                    <form class="navbar-form navbar-left" role="search" method="get" action="search">#}
+        {#                        <input class="form-control" type="text" name="city" id="city" placeholder="输入城市名称，如杭州，广州...">#}
+        {#                        <input class="form-control" type="text" name="name" id="name" placeholder="输入商家名称，如美优乐...">#}
+        {##}
+        {#                        <button type="submit" class="btn btn-default">Search</button>#}
+        {#                    </form>#}
+        {#                </li>#}
+        {#            </ul>#}
+        {#        </div><!-- /.navbar-collapse -->#}
+    </nav>
+    {% comment %}导航栏结束{% endcomment %}
+
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">搜索</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="search" method="get" action="search" target="_blank">
+                <div class="form-group">
+                    <label for="city" class="col-sm-2 control-label">城市</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="city" id="city" placeholder="输入城市名称，如杭州，广州...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">商家</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="name" id="name" placeholder="输入商家名称，如美优乐...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">搜索并下载</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/jquery-2.2.3.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+</body>
+</html>
