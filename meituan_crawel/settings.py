@@ -24,7 +24,12 @@ SECRET_KEY = '3zl#nw2u!63c=dyt9cj_m$=u3euqx9vw)^xv4duzbwo#d-t_*t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'chenji-meow.cn',
+    'www.chenji-meow.cn',
+]
 
 
 # Application definition

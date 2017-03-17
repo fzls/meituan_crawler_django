@@ -14,7 +14,7 @@ def index(request):
     return HttpResponse(template.render())
 
 
-@cache_page(60 * 15)
+# @cache_page(60 * 15)
 def search(request):
     city = request.GET.get('city')
     name = request.GET.get('name')
