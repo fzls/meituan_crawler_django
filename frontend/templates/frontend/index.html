@@ -41,7 +41,7 @@
 
     <div class="panel panel-info">
         <div class="panel-heading">
-            <h3 class="panel-title">搜索</h3>
+            <h3 class="panel-title">通过城市和名称进行搜索</h3>
         </div>
         <div class="panel-body">
             <form class="form-horizontal" role="search" method="get" action="search" target="_blank">
@@ -68,6 +68,43 @@
 
         </div>
     </div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">通过urls获取id</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="search" method="get" action="search" target="_blank">
+                <div class="form-group">
+                    <label for="ids" class="col-sm-2 control-label">商店们的id</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" type="text" name="ids" id="ids" placeholder="输入店铺id列表，用逗号分隔">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <blockquote class="col-sm-offset-2">
+                        示例输入：<br>
+                        假设我们有两家店，网址分别为 <br>
+                        http://waimai.meituan.com/restaurant/144943666965606172，<br>
+                        http://waimai.meituan.com/restaurant/144785599284184445 <br>
+                        最后那部分为他们的id，<br>
+                        所以输入应该为 144943666965606172, 144785599284184445 <br>
+                    </blockquote>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">搜索并下载</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
 </div>
 
 <script src="/static/js/jquery-2.2.3.min.js"></script>
