@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.cache import cache_page
 
-from backend import meituan_crawer
+from backend.meituan_crawer import MeituanCrawler
 
 
 # Create your views here.
@@ -18,7 +18,9 @@ def index(request):
 def search(request):
     city = request.GET.get('city')
     name = request.GET.get('name')
-    wb, filename = meituan_crawer.run(city, name)
+
+    crawler = MeituanCrawler()
+    wb, filename = crawler.run(city, name)
 
     from pypinyin import lazy_pinyin
     filename = ''.join(lazy_pinyin(filename))
