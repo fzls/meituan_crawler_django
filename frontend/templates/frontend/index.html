@@ -59,38 +59,32 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">搜索并下载</button>
-                    </div>
-                </div>
-            </form>
 
-        </div>
-    </div>
-
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">通过urls获取id</h3>
-        </div>
-        <div class="panel-body">
-            <form class="form-horizontal" role="search" method="get" action="search" target="_blank">
                 <div class="form-group">
                     <label for="ids" class="col-sm-2 control-label">商店们的id</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="ids" id="ids" placeholder="输入店铺id列表，用逗号分隔">
+                        <input class="form-control" type="text" name="ids" id="ids" placeholder="输入店铺id列表，用逗号分隔, NOTE: 输入此项时必须同时输入商家名">
                     </div>
                 </div>
 
 
                 <div class="form-group">
                     <blockquote class="col-sm-offset-2">
+                        说明：一般需求只需要输入城市和商家即可，若需要补足缺失的商家，则需要将对应的商家的id也写上（商家应属于同一个品牌）<br>
+                        <br>
                         示例输入：<br>
-                        假设我们有两家店，网址分别为 <br>
+                        如果想搜索阳江市的所有美优乐，则 <br>
+                        城市：阳江 <br>
+                        商家：美优乐 <br>
+                        <br>
+                        假设我们想搜索该市某两家美优乐的店（已知他们的id），网址分别为 <br>
                         http://waimai.meituan.com/restaurant/144943666965606172，<br>
                         http://waimai.meituan.com/restaurant/144785599284184445 <br>
                         最后那部分为他们的id，<br>
-                        所以输入应该为 144943666965606172, 144785599284184445 <br>
+                        所以输入应该为 <br>
+                        城市：阳江 <br>
+                        商家：美优乐 <br>
+                        商店们的id：144943666965606172, 144785599284184445 <br>
                     </blockquote>
                 </div>
 
@@ -103,6 +97,43 @@
 
         </div>
     </div>
+{##}
+{#    <div class="panel panel-info">#}
+{#        <div class="panel-heading">#}
+{#            <h3 class="panel-title">通过urls获取id</h3>#}
+{#        </div>#}
+{#        <div class="panel-body">#}
+{#            <form class="form-horizontal" role="search" method="get" action="search" target="_blank">#}
+{#                <div class="form-group">#}
+{#                    <label for="ids" class="col-sm-2 control-label">商店们的id</label>#}
+{#                    <div class="col-sm-10">#}
+{#                        <input class="form-control" type="text" name="ids" id="ids" placeholder="输入店铺id列表，用逗号分隔">#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{##}
+{#                <div class="form-group">#}
+{#                    <blockquote class="col-sm-offset-2">#}
+{#                        说明：一般需求只需要输入城市和商家即可，若需要补足缺失的商家，则输入商家名和对应的商家的id（商家应属于同一个品牌）<br>#}
+{#                        （实例：如美优乐，id为缺失的几家美优乐商铺的id）<br>#}
+{#                        示例输入：<br>#}
+{#                        假设我们有两家店，网址分别为 <br>#}
+{#                        http://waimai.meituan.com/restaurant/144943666965606172，<br>#}
+{#                        http://waimai.meituan.com/restaurant/144785599284184445 <br>#}
+{#                        最后那部分为他们的id，<br>#}
+{#                        所以输入应该为 144943666965606172, 144785599284184445 <br>#}
+{#                    </blockquote>#}
+{#                </div>#}
+{##}
+{#                <div class="form-group">#}
+{#                    <div class="col-sm-offset-2 col-sm-10">#}
+{#                        <button type="submit" class="btn btn-success">搜索并下载</button>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </form>#}
+{##}
+{#        </div>#}
+{#    </div>#}
 
 
 </div>
